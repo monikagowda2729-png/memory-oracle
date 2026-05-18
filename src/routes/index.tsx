@@ -282,14 +282,17 @@ function SearchSection() {
               ["Cross-team, cross-service retrieval", Globe2],
               ["Confidence scoring with explainable evidence", Eye],
               ["Auto-clustering of recurring failure modes", Boxes],
-            ].map(([t, Icon]) => (
+            ].map(([t, Icon]) => {
+              const I = Icon as typeof Zap;
+              return (
               <li key={t as string} className="flex items-center gap-3 text-muted-foreground">
                 <div className="grid h-7 w-7 place-items-center rounded-lg glass">
-                  {/* @ts-expect-error icon as component */}
-                  <Icon className="h-3.5 w-3.5 text-cyan" />
+                  <I className="h-3.5 w-3.5 text-cyan" />
                 </div>
                 <span>{t as string}</span>
               </li>
+              );
+            }
             ))}
           </ul>
         </div>
