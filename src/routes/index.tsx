@@ -292,8 +292,7 @@ function SearchSection() {
                 <span>{t as string}</span>
               </li>
               );
-            }
-            ))}
+            })}
           </ul>
         </div>
         <SearchDemo />
